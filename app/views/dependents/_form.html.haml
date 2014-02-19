@@ -1,0 +1,25 @@
+= form_for(@dependent, :html=> {"data-abide"=>"" }) do |f|
+  - if @dependent.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@dependent.errors.count, "error")} prohibited this dependent from being saved:"
+      %ul
+        - @dependent.errors.full_messages.each do |msg|
+          %li= msg
+
+  .row
+    .large-3.columns
+      = f.label :first_name
+      = f.text_field :first_name,pattern: "[a-zA-Z]+", required: ''
+      %small.error Firstname is required and must be a string.
+    .large-3.columns
+      = f.label :last_name
+      = f.text_field :last_name,pattern: "[a-zA-Z]+", required: ''
+      %small.error Lastname is required and must be a string.
+    .large-3.columns
+      = f.label :date_of_birth
+      = f.text_field :date_of_birth, class: 'datepicker'
+    = f.hidden_field :user_id, value: current_user.id
+  .row
+    .large-2.columns
+      = f.submit 'Save', class: 'button tiny'
+      = link_to 'Back', dependents_path, class: 'button tiny'

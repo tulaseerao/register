@@ -1,0 +1,23 @@
+%h1 My Dependents
+
+%table
+  %thead
+    %tr
+      %th First name
+      %th Last name
+      %th Date of birth
+      %th
+      %th
+
+  %tbody
+    - @dependents.each do |dependent|
+      %tr
+        %td= dependent.first_name
+        %td= dependent.last_name
+        %td= dependent.date_of_birth
+        %td= link_to 'Edit', edit_dependent_path(dependent)
+        %td= link_to 'Delete', dependent, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Dependent', new_dependent_path, class: 'button'

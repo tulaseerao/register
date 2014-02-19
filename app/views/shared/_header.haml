@@ -1,0 +1,14 @@
+.large-9.columns
+  - if current_user
+    %ul.right.button-group
+      %li= link_to "Dependents", dependents_path, :class => 'button tiny'
+      %li= link_to "Medications", "#", :class => 'button tiny'
+      %li= link_to "Doctors", "#", :class => 'button tiny'
+      %li= link_to "Pharmacies", "#", :class => 'button tiny'
+      %li= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'button tiny'
+  - else
+    %ul.right.button-group
+      - if current_user
+        %li= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'button tiny'
+      - else
+        %li= link_to "Login", new_user_session_path, :class => 'button tiny'

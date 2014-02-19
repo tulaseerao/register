@@ -1,0 +1,24 @@
+%footer.row
+  .large-12.columns
+    %hr/
+    .row
+      .large-6.columns
+        %p &copy; Copyright no one at all.
+      .large-6.columns
+        %ul.inline-list.right
+          %li
+            %a{:href => "#"} Link 1
+          %li
+            %a{:href => "#"} Link 2
+          %li
+            %a{:href => "#"} Link 3
+          %li
+            %a{:href => "#"} Link 4
+
+
+    %a.exit-off-canvas
+    / / %p.notice= notice
+    / %p.alert= alert
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "vendor/modernizr"
+    / = javascript_include_tag :defaults

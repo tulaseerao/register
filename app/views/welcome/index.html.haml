@@ -1,0 +1,24 @@
+- unless current_user
+  .large-4.columns
+    = image_tag("broken_glass.png", size: "400x300")
+    %h4 The Problem
+    %p In today's age it is hard enough to remember where you need to be on any given day. On top of that you have to remember when medications run. Not just when they run out, but to call before they run out to get a prescription for me.
+  .large-4.columns
+    = image_tag("hope.png", size: "400x300")
+    %h4 The Hope
+    %p What if there were something that could easily organize your medications? What if this could also remember when you were going to run out and remind you before hand.
+  .large-4.columns
+    = image_tag("sucess.png", size: "400x300")
+    %h4 The Solution
+    %p Medicine Reminder can help you. We will remember all your prescriptions for you. We will remind you to take your medication and we will remind you when you need to get more (before you run out of it). Oh, and we also track how this medication is effecting you.
+  / Call to Action Panel
+  - unless current_user
+    .row
+      .large-12.columns
+        .panel
+          %h4 Get Started!
+          .row
+            .large-9.columns
+              %p It's free, so what are you waiting for?
+            .large-3.columns
+              =link_to "Register", new_user_registration_path, class: 'radius button right'
