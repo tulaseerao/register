@@ -14,6 +14,14 @@ Run DB migration >rake db:migrate RAILS_ENV=development
 
 Start the server: > rails s
 
-Then navigate to localhost:3000 in your browser.
+Navigate to localhost:3000 in your browser
+
+Click register button to register an account
+
+then click Dependants to add your dependents
 
 
+Run Rspecs
+--------------------
+> rake db:migrate RAILS_ENV=test
+> bundle exec rspec
