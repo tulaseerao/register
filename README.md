@@ -24,4 +24,5 @@ then click Dependants to add your dependents
 Run Rspecs
 --------------------
 > rake db:migrate RAILS_ENV=test
+
 > bundle exec rspec
